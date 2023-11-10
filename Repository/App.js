@@ -57,7 +57,7 @@ function TaskStatus(e, status, color) {
 
         for (const className of classList) {
             if (className.includes("bg")) {
-                newClassNames.push(color, "bg-opacity-50");
+                newClassNames.push(color, "bg-opacity-75");
             } else {
                 newClassNames.push(className);
             }
