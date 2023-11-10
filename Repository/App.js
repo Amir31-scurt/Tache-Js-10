@@ -17,10 +17,10 @@ function enableButton(){
 TaskInput.addEventListener("input", enableButton);
 // Local Storge
 window.addEventListener("load", () => {
-    tasks.innerHTML = localStorage.getItem("TasksStorage") || "";
+    tasks.innerHTML = localStorage.getItem("TasksStoraged") || "";
 });
 function TaskToLocStor() {
-    localStorage.setItem("TasksStorage", tasks.innerHTML);
+    localStorage.setItem("TasksStoraged", tasks.innerHTML);
 }
 // Add Tache
 function AddToBoard(){
@@ -44,7 +44,7 @@ function AddToBoard(){
 // Delete Function
 function Delete(e){
     e.parentElement.parentElement.parentElement.remove();
-    const tk = "TasksStorage";
+    const tk = "TasksStoraged";
     localStorage.removeItem(tk);
     TaskToLocStor();
 }
